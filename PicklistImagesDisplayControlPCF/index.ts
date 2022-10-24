@@ -37,7 +37,9 @@ export class PicklistImagesDisplayControlPCF implements ComponentFramework.Stand
 		container.appendChild(this._container);
 
         this.changeFunction = notifyOutputChanged;
-        this.picklistValue=0;
+        
+        //this.picklistValue=0;
+        this.picklistValue = context.parameters.picklistValue.raw as any;
     }
 
 
