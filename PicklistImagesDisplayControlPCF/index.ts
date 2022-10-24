@@ -6,7 +6,8 @@ export class PicklistImagesDisplayControlPCF implements ComponentFramework.Stand
 	private _container: HTMLDivElement;
 	private _context: ComponentFramework.Context<IInputs>;
 	private _controlViewRendered: boolean;
-    private picklistValue:number;
+    public picklistValue:number;
+    public changeFunction:any;
 
     /**
      * Empty constructor.
@@ -35,8 +36,8 @@ export class PicklistImagesDisplayControlPCF implements ComponentFramework.Stand
 		this._container.setAttribute("id","comp1divid");
 		container.appendChild(this._container);
 
+        this.changeFunction = notifyOutputChanged;
         this.picklistValue=0;
-
     }
 
 
@@ -62,6 +63,7 @@ export class PicklistImagesDisplayControlPCF implements ComponentFramework.Stand
      */
     public getOutputs(): IOutputs
     {
+        debugger;
         return { picklistValue: this.picklistValue };
     }
 
