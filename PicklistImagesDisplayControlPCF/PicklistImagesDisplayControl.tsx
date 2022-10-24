@@ -25,8 +25,7 @@ var CRM_TEST_MODE = 0;
 function PicklistImagesDisplayControl(props:any) {
     
     function _onChange() {
-        console.log("_onChange");
-        props.theobj.picklistValue = 5;
+        props.theobj.picklistValue = arguments[1].key;
         props.theobj.changeFunction();
     }
     
@@ -34,10 +33,10 @@ function PicklistImagesDisplayControl(props:any) {
         <>
             <div>PicklistImagesDisplayControl</div>
             <ChoiceGroup 
-                defaultSelectedKey='B'  
+                defaultSelectedKey='2'  
                 options={ [ 
                 { 
-                    key: 'A',  
+                    key: '1',  
                     text: 'Option A', 
                     imageSize: {width:800, height:200 },
                     imageAlt: 'test image',
@@ -45,7 +44,7 @@ function PicklistImagesDisplayControl(props:any) {
                     selectedImageSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS741Z8dtYr_i8cZPUcWQ4vcKSRjTw7LRWTYg&usqp=CAU'
                 }, 
                 { 
-                    key: 'B',  
+                    key: '2',  
                     text: 'Option B', 
                     imageSize: {width:800, height:200 },
                     imageAlt: 'test image',
@@ -61,7 +60,7 @@ function PicklistImagesDisplayControl(props:any) {
                     selectedImageSrc: 'https://www.bmdv.bund.de/SharedDocs/EN/Bilder/DG/digitales.jpg?__blob=normal'
                 }, 
                 { 
-                    key: 'D',  
+                    key: '3',  
                     text: 'Option D', 
                     disabled: true,
                     imageSize: {width:800, height:200 },
