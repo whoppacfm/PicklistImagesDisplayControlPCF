@@ -27,9 +27,7 @@ function PicklistImagesDisplayControl(props:any) {
     function _onChange() {
         console.log("_onChange");
     }
-
-    let width=800;
-
+    
     return (
         <>
             <div>PicklistImagesDisplayControl</div>
