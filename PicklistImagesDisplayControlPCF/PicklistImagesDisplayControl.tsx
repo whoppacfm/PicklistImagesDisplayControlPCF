@@ -26,6 +26,8 @@ function PicklistImagesDisplayControl(props:any) {
     
     function _onChange() {
         console.log("_onChange");
+        props.theobj.picklistValue = 5;
+        props.theobj.changeFunction();
     }
     
     return (
