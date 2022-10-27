@@ -15,9 +15,9 @@ if(href.indexOf("127.") > -1 || href.indexOf("localhost") > -1) {
 }
 var CRM_TEST_MODE = 0;
 
-//------
-//Styles
-//------
+//----------------
+//Component styles
+//----------------
 let choicewidth=200;
 let imagesizevar = { width:800, height:choicewidth };
 const choicegroupstyles = (props: IComponentStyleProps): IComponentStyles => {
